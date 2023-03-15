@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 12:53:29 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/03/14 13:59:33 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/03/15 08:50:17 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,6 @@ Cat::Cat() : Animal("Cat")
 
 Cat::Cat(const Cat& src) : Animal()
 {
-	this->_type = src._type;
-	this->_brain = new Brain();
-	*this->_brain = *src._brain;
 	std::cout
 		<< "\t\tCat Copy Constructor called."
 	<< std::endl;

@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 12:53:27 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/03/14 14:01:47 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/03/14 21:20:41 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #include <iostream>
 #include "Brain.class.hpp"
 
-class Animal
+class Animal : public Brain
 {
 
 	public:
