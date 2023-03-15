@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 12:53:29 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/03/14 21:40:52 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/03/15 09:53:20 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,25 +18,65 @@
 #include "WrongCat.class.hpp"
 #include "Brain.class.hpp"
 
-int main()
-{
-	const Animal* j = new Dog();
-	Animal* i = new Cat();
+#define ANIMALS 10
 
-	i->setIdea(0, "first idea");
-	std::cout << i->getIdea(0) << std::endl;
+int	main() {
 
-	Animal* caat = new Cat();
+	std::cout << "\n----TEST 1---- CONSTRUCTION -----\n" << std::endl;
+	{
+		const Animal*	animal[ANIMALS];
 
-	caat = i;
-	
-	i->setIdea(0, "first idea mod");
-	
-	std::cout << caat->getIdea(0) << std::endl;
-	
-	delete j; //should not create a leak
-	delete i;
-	delete caat;
+		for (int i = 0; i < ANIMALS; i++)
+		{
+			if (i % 2 == 0)
+				animal[i] = new Cat();
+			else
+				animal[i] = new Dog();
+		}
 
-	return 0;
+		std::cout << "\n----TEST 1---- ANNOUNCE -----\n" << std::endl;
+
+		for (int i = 0; i < ANIMALS; i++)
+		{
+			std::cout << animal[i]->getType() << std::endl;
+			animal[i]->makeSound();
+		}
+
+		std::cout << "\n----TEST 1---- DECONSTRUCT -----\n" << std::endl;
+
+		for (int i = 0; i < ANIMALS; i++)
+			delete animal[i];
+	}
+	std::cout << "\n----TEST 1---- COMPLETED -----\n" << std::endl;
+
+	std::cout << "\n\n----TEST 2---- CONSTRUCTION -----\n" << std::endl;
+	{
+		Cat*	cat = new Cat;
+		Dog*	dog = new Dog;
+
+		std::cout << "\n----TEST 2---- IDEAS -----\n" << std::endl;
+
+		cat->setIdea(0, "First Idea");
+		dog->setIdea(0, "First Idea");
+		cat->getIdea(0);
+		dog->getIdea(0);
+		Cat *cat2 = new Cat(*cat);
+		cat2->getIdea(0);
+		cat->setIdea(0, "First Idea #2");
+		cat->getIdea(0);
+		cat2->getIdea(0);
+		cat2->getIdea(1);
+		dog->getIdea(0);
+		dog->makeSound();
+		cat2->makeSound();
+		
+		std::cout << "\n----TEST 2---- DECONSTRUCT -----\n" << std::endl;
+
+		delete cat;
+		delete cat2;
+		delete dog;
+	}
+	std::cout << "\n----TEST 2---- COMPLETED -----\n" << std::endl;
+
+	return (0);
 }

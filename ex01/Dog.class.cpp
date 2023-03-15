@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 12:53:29 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/03/14 10:10:32 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/03/15 09:44:28 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,22 +17,17 @@
 
 Dog::Dog() : Animal("Dog")
 {
+	this->_brain = new Brain();
 	std::cout
-		<< "\t\tDog Default Constructor called."
+		<< "\t\t\tDog Default Constructor called."
 	<< std::endl;
 }
 
-Dog::~Dog()
-{
-	std::cout
-		<< "\t\tDog Deconstructor called."
-	<< std::endl;
-}
 
 Dog::Dog(const Dog& src) : Animal()
 {
 	std::cout
-		<< "\t\tDog Copy Constructor called."
+		<< "\t\t\tDog Copy Constructor called."
 	<< std::endl;
 	*this = src;
 }
@@ -40,11 +35,23 @@ Dog::Dog(const Dog& src) : Animal()
 Dog&	Dog::operator=(const Dog& rhs)
 {
 	if (this != &rhs)
+	{
 		this->_type = rhs._type;
+		this->_brain = new Brain();
+		*this->_brain = *rhs._brain;
+	}
 	std::cout
-		<< "\t\tDog Copy Assigment Constructor called."
+		<< "\t\t\tDog Copy Assigment Constructor called."
 	<< std::endl;
 	return *this;
+}
+
+Dog::~Dog()
+{
+	std::cout
+		<< "\t\t\tDog Deconstructor called."
+	<< std::endl;
+	delete this->_brain;
 }
 
 // FUNCTIONS
@@ -54,5 +61,30 @@ void			Dog::makeSound() const
 	std::cout
 		<< "Dog sound..."
 	<< std::endl;
+	return;
+}
+
+void	Dog::getIdea(unsigned const int number) const
+{
+	if (number <= 100)
+	{
+		if (this->_brain->getIdea(number).empty())
+			std::cout << this->getType() << " " << number << ": empty" << std::endl;
+		else
+			std::cout << this->getType() << " " << number << ":" << this->_brain->getIdea(number) << std::endl;
+	}
+	else
+		std::cout << "out of capacity" << std::endl;
+	return;
+}
+
+void	Dog::setIdea(unsigned const int number, std::string const idea)
+{
+	if (number <= 100)
+	{
+		this->_brain->setIdea(number, idea);
+		return;
+	}
+	std::cout << "out of capacity" << std::endl;
 	return;
 }

@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 12:53:27 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/03/14 09:26:03 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/03/15 09:07:59 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,11 @@ class Cat : public Animal
 		Cat(); // canonical Default Constructor
 		Cat(const Cat& src); // canonical Copy Constructor
 		Cat&	operator=(const Cat& rhs); // canonical Assigment Constructor
-		~Cat(); // canonical Destructor
+		virtual ~Cat(); // canonical Destructor
 
 		virtual void	makeSound() const;
+		void			getIdea(unsigned const int number) const;
+		void			setIdea(unsigned const int number, std::string const idea);
 
 	private:
 
