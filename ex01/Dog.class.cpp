@@ -6,12 +6,14 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 12:53:29 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/03/16 11:03:17 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/03/17 00:04:01 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Dog.class.hpp"
+#include "Animal.class.hpp"
+#include "Brain.class.hpp"
 
 // CONSTRUCTORS
 
@@ -27,6 +29,12 @@ Dog::Dog()
 
 Dog::Dog(const Dog& src) : Animal()
 {
+	if (this != &src)
+	{
+		this->_type = src._type;
+		this->_brain = new Brain();
+		*this->_brain = *src._brain;
+	}
 	std::cout
 		<< "\t\t\tDog Copy Constructor called."
 	<< std::endl;
@@ -38,7 +46,6 @@ Dog&	Dog::operator=(const Dog& rhs)
 	if (this != &rhs)
 	{
 		this->_type = rhs._type;
-		this->_brain = new Brain();
 		*this->_brain = *rhs._brain;
 	}
 	std::cout
