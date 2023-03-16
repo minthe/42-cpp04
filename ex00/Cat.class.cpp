@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 12:53:29 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/03/13 18:16:59 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/03/17 00:14:38 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,9 @@
 
 // CONSTRUCTORS
 
-Cat::Cat() : Animal("Cat")
+Cat::Cat()
 {
+	this->type = "Cat";
 	std::cout
 		<< "\t\tCat Default Constructor called."
 	<< std::endl;

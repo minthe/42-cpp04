@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   DOg.class.cpp                                      :+:      :+:    :+:   */
+/*   Dog.class.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 12:53:29 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/03/13 18:16:56 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/03/17 00:14:24 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 
 // CONSTRUCTORS
 
-Dog::Dog() : Animal("Dog")
+Dog::Dog()
 {
+	this->type = "Dog";
 	std::cout
 		<< "\t\tDog Default Constructor called."
 	<< std::endl;

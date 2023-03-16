@@ -15,8 +15,9 @@
 
 // CONSTRUCTORS
 
-WrongCat::WrongCat() : WrongAnimal("WrongCat")
+WrongCat::WrongCat()
 {
+	this->type = "WrongCat";
 	std::cout
 		<< "\t\tWrongCat Default Constructor called."
 	<< std::endl;
