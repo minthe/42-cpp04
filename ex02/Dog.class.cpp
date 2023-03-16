@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 12:53:29 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/03/16 10:37:59 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/03/16 10:40:21 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 
 // CONSTRUCTORS
 
-Dog::Dog() : Animal("Dog")
+Dog::Dog()
 {
+	this->_type = "Dog";
 	std::cout
 		<< "\t\t\tDog Default Constructor called."
 	<< std::endl;
@@ -24,7 +25,7 @@ Dog::Dog() : Animal("Dog")
 }
 
 
-Dog::Dog(const Dog& src) : Animal()
+Dog::Dog(const Dog& src) : AAnimal()
 {
 	std::cout
 		<< "\t\t\tDog Copy Constructor called."

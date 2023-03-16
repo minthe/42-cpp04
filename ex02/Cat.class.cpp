@@ -6,19 +6,20 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 12:53:29 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/03/16 10:37:53 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/03/16 10:40:04 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "Cat.class.hpp"
-#include "Animal.class.hpp"
+#include "AAnimal.class.hpp"
 #include "Brain.class.hpp"
 
 // CONSTRUCTORS
 
-Cat::Cat() : Animal("Cat")
+Cat::Cat()
 {
+	this->_type = "Cat";
 	std::cout
 		<< "\t\t\tCat Default Constructor called."
 	<< std::endl;
@@ -26,7 +27,7 @@ Cat::Cat() : Animal("Cat")
 }
 
 
-Cat::Cat(const Cat& src) : Animal("Cat")
+Cat::Cat(const Cat& src) : AAnimal()
 {
 	std::cout
 		<< "\t\t\tCat Copy Constructor called."

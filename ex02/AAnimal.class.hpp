@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.class.hpp                                   :+:      :+:    :+:   */
+/*   AAnimal.class.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 12:53:27 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/03/16 11:24:52 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/03/16 10:37:19 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,16 +17,16 @@
 
 #include <iostream>
 
-class Animal
+class AAnimal
 {
 
 	public:
 
-		Animal(); // canonical Default Constructor
-		Animal(std::string type); // String Constructor
-		Animal(const Animal& src); // canonical Copy Constructor
-		Animal&	operator=(const Animal& rhs); // canonical Assigment Constructor
-		virtual ~Animal(); // canonical Destructor
+		AAnimal(); // canonical Default Constructor
+		AAnimal(std::string type); // String Constructor
+		AAnimal(const AAnimal& src); // canonical Copy Constructor
+		AAnimal&	operator=(const AAnimal& rhs); // canonical Assigment Constructor
+		virtual ~AAnimal(); // canonical Destructor
 
 		std::string					getType() const;
 		virtual void				makeSound() const = 0;

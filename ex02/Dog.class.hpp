@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 12:53:27 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/03/15 08:17:28 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/03/16 10:33:35 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 # define DOG_CLASS_H
 
 #include <iostream>
-#include "Animal.class.hpp"
+#include "AAnimal.class.hpp"
 #include "Brain.class.hpp"
 
-class Dog : public Animal
+class Dog : public AAnimal
 {
 
 	public:
