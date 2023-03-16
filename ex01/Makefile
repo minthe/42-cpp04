@@ -2,7 +2,7 @@ NAME = Animal
 
 CC = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -g # -fsanitize=address
 
 SRCS =	main.cpp \
 		Animal.class.cpp \
