@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 12:53:29 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/03/16 19:19:54 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/03/17 00:10:05 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,13 @@ Cat::Cat()
 	this->_brain = new Brain();
 }
 
-
 Cat::Cat(const Cat& src) : AAnimal()
 {
+	{
+		this->_type = src._type;
+		this->_brain = new Brain();
+		*this->_brain = *src._brain;
+	}
 	std::cout
 		<< "\t\t\tCat Copy Constructor called."
 	<< std::endl;
@@ -40,7 +44,6 @@ Cat&	Cat::operator=(const Cat& rhs)
 	if (this != &rhs)
 	{
 		this->_type = rhs._type;
-		this->_brain = new Brain();
 		*this->_brain = *rhs._brain;
 	}
 	std::cout
