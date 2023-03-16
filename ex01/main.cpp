@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 12:53:29 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/03/16 09:07:30 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/03/16 11:13:53 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ int	main() {
 	{
 		Cat*	cat = new Cat;
 		Dog*	dog = new Dog;
+		Cat*	cat3 = new Cat;
 
 		std::cout << "\n----TEST 2---- IDEAS -----\n" << std::endl;
 
@@ -69,6 +70,18 @@ int	main() {
 		dog->getIdea(0);
 		dog->makeSound();
 		cat2->makeSound();
+
+		std::cout << "\nTesting copy constructor -> brain deep copy\n" << std::endl;
+		cat3->getIdea(0);
+		cat2->getIdea(0);
+		*cat2 = *cat3;
+		cat2->getIdea(0);
+		*cat3 = *cat;
+		*cat2 = *cat3;
+		cat3->getIdea(0);
+		cat2->getIdea(0);
+		cat2->getIdea(-12);
+		cat2->getIdea(142);
 		
 		std::cout << "\n----TEST 2---- DECONSTRUCT -----\n" << std::endl;
 

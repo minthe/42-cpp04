@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 12:53:29 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/03/15 09:49:26 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/03/16 10:37:53 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@
 
 Cat::Cat() : Animal("Cat")
 {
-	this->_brain = new Brain();
 	std::cout
 		<< "\t\t\tCat Default Constructor called."
 	<< std::endl;
+	this->_brain = new Brain();
 }
 
 

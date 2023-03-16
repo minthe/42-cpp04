@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 12:53:29 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/03/15 09:44:28 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/03/16 10:37:59 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@
 
 Dog::Dog() : Animal("Dog")
 {
-	this->_brain = new Brain();
 	std::cout
 		<< "\t\t\tDog Default Constructor called."
 	<< std::endl;
+	this->_brain = new Brain();
 }
 
 
@@ -48,10 +48,10 @@ Dog&	Dog::operator=(const Dog& rhs)
 
 Dog::~Dog()
 {
+	delete this->_brain;
 	std::cout
 		<< "\t\t\tDog Deconstructor called."
 	<< std::endl;
-	delete this->_brain;
 }
 
 // FUNCTIONS

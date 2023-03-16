@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 12:53:29 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/03/15 09:32:08 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/03/16 10:38:49 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 Brain::Brain()
 {
 	std::cout
-		<< "\tBrain Default Constructor called."
+		<< "\t\t\t\tBrain Default Constructor called."
 	<< std::endl;
 }
 
