@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 12:53:29 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/03/16 19:24:52 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/03/17 16:34:11 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ int	main() {
 		Cat*	cat = new Cat;
 		Dog*	dog = new Dog;
 		Cat*	cat3 = new Cat;
+		Cat		cat4;
 
 		std::cout << "\n----TEST 2---- IDEAS -----\n" << std::endl;
 
@@ -97,10 +98,12 @@ int	main() {
 		cat2->getIdea(0);
 		*cat3 = *cat;
 		*cat2 = *cat3;
+		cat4 = *cat2;
 		cat3->getIdea(0);
 		cat2->getIdea(0);
 		cat2->getIdea(-12);
 		cat2->getIdea(142);
+		cat4.getIdea(0);
 		
 		std::cout << "\n----TEST 2---- DECONSTRUCT -----\n" << std::endl;
 
