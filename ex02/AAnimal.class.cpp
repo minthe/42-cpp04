@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AAnimal.class.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 12:53:29 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/03/16 19:19:29 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/04/27 17:48:40 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,10 +61,10 @@ std::string		AAnimal::getType() const
 	return this->_type;
 }
 
-void			AAnimal::makeSound() const
-{
-	std::cout
-		<< "AAnimal sound..."
-	<< std::endl;
-	return;
-}
+// void			AAnimal::makeSound() const
+// {
+// 	std::cout
+// 		<< "AAnimal sound..."
+// 	<< std::endl;
+// 	return;
+// }
