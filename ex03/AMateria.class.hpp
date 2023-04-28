@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 12:24:31 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/04/27 15:40:27 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/04/28 12:39:49 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # define AMATERIA_CLASS_H
 
 #include <iostream>
+#include "ICharacter.class.hpp"
 
 class AMateria
 {

@@ -6,11 +6,14 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 17:31:54 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/04/27 18:32:06 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/04/28 12:41:44 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include "AMateria.class.hpp"
+#include "ICharacter.class.hpp"
+#include "Character.class.hpp"
 
 int main()
 {
