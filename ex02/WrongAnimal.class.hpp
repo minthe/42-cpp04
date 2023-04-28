@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.class.hpp                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.de> +#+  +:+       +#+        */
+/*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 12:53:27 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/03/13 18:20:15 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/04/28 14:37:11 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #ifndef WRONGANIMAL_CLASS_H
-# define WRONGANIMAL_CLASS_H
+#define WRONGANIMAL_CLASS_H
 
 #include <iostream>
 

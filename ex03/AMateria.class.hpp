@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 12:24:31 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/04/28 12:39:49 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/04/28 14:37:34 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,21 @@
 
 class AMateria
 {
-	protected:
-		
 	public:
 
+		AMateria(); //canonical default constructor
+		AMateria(const AMateria& src); //canonical copy constructor
+		AMateria&	operator=(const AMateria& rhs); //canonical assignment constructor
+		virtual ~AMateria(); //canonical destructor
 		AMateria(std::string const & type);
-		AMateria();
 		
-		std::string const & getType() const; //Returns the materia type
+		std::string const & getType() const; //returns the materia type
 
 		virtual AMateria* clone() const = 0;
 		virtual void use(ICharacter& target);
+
+	protected:
+		
 };
 
 #endif
