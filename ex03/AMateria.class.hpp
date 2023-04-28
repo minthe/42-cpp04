@@ -6,14 +6,11 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 12:24:31 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/04/28 14:37:34 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/04/28 16:04:56 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-
-#ifndef AMATERIA_CLASS_H
-# define AMATERIA_CLASS_H
 
 #include <iostream>
 #include "ICharacter.class.hpp"
@@ -36,5 +33,3 @@ class AMateria
 	protected:
 		
 };
-
-#endif
