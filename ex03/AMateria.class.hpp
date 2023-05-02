@@ -6,13 +6,14 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 12:24:31 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/04/28 16:04:56 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/02 18:02:24 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
+#include <string>
 #include "ICharacter.class.hpp"
 
 class AMateria
@@ -31,5 +32,7 @@ class AMateria
 		virtual void use(ICharacter& target);
 
 	protected:
+
+		std::string	type;
 		
 };

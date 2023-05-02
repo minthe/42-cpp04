@@ -6,16 +6,16 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 17:44:31 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/04/28 16:04:42 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/02 18:00:17 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
-#include "AMateria.class.hpp"
 
-class ICharacter {
+class ICharacter
+{
 
 	public:
 
