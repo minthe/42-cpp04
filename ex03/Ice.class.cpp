@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 19:19:13 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/03 19:30:03 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/03 21:03:58 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "AMateria.class.hpp"
 #include "Ice.class.hpp"
 
-Ice::Ice() {}
+Ice::Ice() :  {}
 Ice::~Ice() {}
 
 Ice::Ice(const Ice& src)
@@ -29,6 +29,5 @@ Ice& Ice::operator=(const Ice &rhs)
 
 AMateria* Ice::clone() const
 {
-	new Ice(*this);
-	return 
+	//clone
 }
