@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 16:34:01 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/03 18:30:08 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/03 18:50:38 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,7 @@
 
 AMateria::AMateria() {}
 AMateria::~AMateria() {}
-
-AMateria::AMateria(std::string const & type)
-{
-	this->_type.assign(type);
-}
+AMateria::AMateria(std::string const & type) : _type(type) {}
 
 AMateria::AMateria(const AMateria& src) // canonical copy constructor
 {

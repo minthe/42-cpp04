@@ -6,14 +6,13 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 12:24:31 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/03 18:23:23 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/03 19:14:49 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
-#include <string>
 #include "ICharacter.class.hpp"
 
 class ICharacter;
@@ -31,7 +30,7 @@ class AMateria
 		
 		std::string const & getType() const; // returns the materia type
 
-		virtual AMateria* clone() const = 0; // template function
+		virtual AMateria * clone() const = 0; // template function
 		virtual void use(ICharacter& target);
 
 	protected:
