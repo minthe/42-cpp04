@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 12:24:31 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/02 18:02:24 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/03 18:23:23 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,26 @@
 #include <string>
 #include "ICharacter.class.hpp"
 
+class ICharacter;
+
 class AMateria
 {
 	public:
 
-		AMateria(); //canonical default constructor
-		AMateria(const AMateria& src); //canonical copy constructor
-		AMateria&	operator=(const AMateria& rhs); //canonical assignment constructor
-		virtual ~AMateria(); //canonical destructor
+		AMateria(); // canonical default constructor
+		AMateria(const AMateria& src); // canonical copy constructor
+		AMateria&	operator=(const AMateria& rhs); // canonical assignment constructor
+		virtual ~AMateria(); // canonical destructor
+
 		AMateria(std::string const & type);
 		
-		std::string const & getType() const; //returns the materia type
+		std::string const & getType() const; // returns the materia type
 
-		virtual AMateria* clone() const = 0;
+		virtual AMateria* clone() const = 0; // template function
 		virtual void use(ICharacter& target);
 
 	protected:
 
-		std::string	type;
+		std::string	_type;
 		
 };
