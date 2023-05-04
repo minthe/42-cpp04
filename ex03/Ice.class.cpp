@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 19:19:13 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/04 13:46:40 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/04 13:59:29 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,12 @@ Ice* Ice::clone() const
 	Ice* ptrIce;
 	ptrIce = new Ice;
 	return ptrIce;
+}
+
+void Ice::use(ICharacter &target)
+{
+	std::cout
+		<< "* shoots an ice bolt at "
+		<< target.getName() << " *"
+	<< std::endl;
 }
