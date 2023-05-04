@@ -4,13 +4,13 @@ CC = c++
 
 CFLAGS = -Wall -Werror -Wextra -std=c++98 -g -fsanitize=address
 
-SRCS =	main.cpp \
-		AMateria.class.cpp \
-		Character.class.cpp \
-		Cure.class.cpp \
-		Ice.class.cpp \
-		IMateriaSource.class.cpp \
-		MateriaSource.class.cpp \
+SRCS =	sources/main.cpp \
+		sources/AMateria.class.cpp \
+		sources/Character.class.cpp \
+		sources/Cure.class.cpp \
+		sources/Ice.class.cpp \
+		sources/IMateriaSource.class.cpp \
+		sources/MateriaSource.class.cpp \
 
 OBJS = ${SRCS:.pp=.0}
 
