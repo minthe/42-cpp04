@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 12:24:31 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/03 21:58:36 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/04 14:46:36 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ class AMateria
 	protected:
 
 		std::string	_type;
+		ICharacter&	_target;
 		
 };
