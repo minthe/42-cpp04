@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.class.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
+/*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 12:24:31 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/04 14:46:36 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/04 15:38:29 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,5 @@ class AMateria
 	protected:
 
 		std::string	_type;
-		ICharacter&	_target;
 		
 };
