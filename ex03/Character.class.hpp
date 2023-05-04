@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.class.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 17:37:53 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/04 16:25:53 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/04 16:50:28 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ class Character : public ICharacter
 
 	private:
 
-		std::string _name;
+		std::string	_name;
+		AMateria	*_slot[4];
 		
 };
