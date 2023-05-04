@@ -6,14 +6,18 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 17:31:54 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/04/28 12:41:44 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/04 21:04:37 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "AMateria.class.hpp"
-#include "ICharacter.class.hpp"
-#include "Character.class.hpp"
+#include "../includes/AMateria.class.hpp"
+#include "../includes/ICharacter.class.hpp"
+#include "../includes/Character.class.hpp"
+#include "../includes/Cure.class.hpp"
+#include "../includes/Ice.class.hpp"
+#include "../includes/MateriaSource.class.hpp"
+#include "../includes/IMateriaSource.class.hpp"
 
 int main()
 {

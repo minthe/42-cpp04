@@ -6,11 +6,11 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 17:37:54 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/04 19:42:58 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/04 20:52:18 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Character.class.hpp"
+#include "../includes/Character.class.hpp"
 
 Character::Character() :_name("default") {}
 Character::~Character() {}
@@ -25,7 +25,7 @@ Character::Character(const Character& src)
 	*this = src;
 }
 
-Character& Character::operator=(const Character &rhs)
+Character& Character::operator=(const Character &rhs) // deep copy
 {
 	return *this;
 }
