@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 17:31:54 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/05 21:06:35 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/05 21:09:48 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,40 +19,12 @@
 #include "../includes/MateriaSource.class.hpp"
 #include "../includes/IMateriaSource.class.hpp"
 
-// int main() // from subject
-// {
-// 	IMateriaSource* src = new MateriaSource();
 
-// 	src->learnMateria(new Ice());
-// 	src->learnMateria(new Cure());
-
-// 	ICharacter* me = new Character("me");
-
-// 	AMateria* tmp;
-// 	tmp = src->createMateria("ice");
-// 	me->equip(tmp);
-// 	tmp = src->createMateria("cure");
-// 	me->equip(tmp);
-	
-// 	ICharacter* bob = new Character("bob");
-// 	me->use(0, *bob);
-// 	me->use(1, *bob);
-
-// 	delete bob;
-// 	delete me;
-// 	delete src;
-
-// 	return 0;
-// }
-
-int main() // Additional Tests 1
+int main() // from subject
 {
 	IMateriaSource* src = new MateriaSource();
 
 	src->learnMateria(new Ice());
-	src->learnMateria(new Cure());
-	src->learnMateria(new Cure());
-	src->learnMateria(new Cure());
 	src->learnMateria(new Cure());
 
 	ICharacter* me = new Character("me");
@@ -62,7 +34,7 @@ int main() // Additional Tests 1
 	me->equip(tmp);
 	tmp = src->createMateria("cure");
 	me->equip(tmp);
-
+	
 	ICharacter* bob = new Character("bob");
 	me->use(0, *bob);
 	me->use(1, *bob);
@@ -73,6 +45,35 @@ int main() // Additional Tests 1
 
 	return 0;
 }
+
+// int main() // Additional Tests 1
+// {
+// 	IMateriaSource* src = new MateriaSource();
+
+// 	src->learnMateria(new Ice());
+// 	src->learnMateria(new Cure());
+// 	src->learnMateria(new Cure());
+// 	src->learnMateria(new Cure());
+// 	src->learnMateria(new Cure());
+
+// 	ICharacter* me = new Character("me");
+
+// 	AMateria* tmp;
+// 	tmp = src->createMateria("ice");
+// 	me->equip(tmp);
+// 	tmp = src->createMateria("cure");
+// 	me->equip(tmp);
+
+// 	ICharacter* bob = new Character("bob");
+// 	me->use(0, *bob);
+// 	me->use(1, *bob);
+
+// 	delete bob;
+// 	delete me;
+// 	delete src;
+
+// 	return 0;
+// }
 
 // int main() // Additional Tests 2
 // {
