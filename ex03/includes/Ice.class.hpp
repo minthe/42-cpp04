@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 18:03:58 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/05 17:33:27 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/05 20:49:33 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ class Ice : public AMateria
 		Ice& operator=(const Ice& rhs); // canonical assignment constructor
 		virtual ~Ice(); // canonical destructor
 		
-		Ice* clone() const;
+		AMateria* clone() const;
 };

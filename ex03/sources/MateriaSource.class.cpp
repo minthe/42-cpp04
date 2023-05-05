@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 17:41:06 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/05 19:33:45 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/05 21:01:25 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,14 @@ MateriaSource::MateriaSource()
 	_init_memory();
 }
 
-MateriaSource::~MateriaSource() {}
+MateriaSource::~MateriaSource()
+{
+	for (int i = 0; i < 4; i++)
+		if (_memory[i] != NULL)
+		{
+			delete _memory[i];
+		}
+}
 
 MateriaSource::MateriaSource(const MateriaSource & src) : IMateriaSource(src)
 {
@@ -34,7 +41,10 @@ MateriaSource& MateriaSource::operator=(const MateriaSource &rhs)
 			delete this->_memory[i];
 			this->_memory[i] = NULL;
 		}
-		this->_memory[i] = rhs._memory[i];
+		if (rhs._memory[i] != NULL)
+			this->_memory[i] = rhs._memory[i]->clone();
+		else
+			this->_memory[i] = NULL;
 	}
 	return *this;
 }
