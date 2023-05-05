@@ -11,7 +11,7 @@ SRCS =	sources/main.cpp \
 		sources/Ice.class.cpp \
 		sources/MateriaSource.class.cpp \
 
-OBJS = ${SRCS:.pp=.0}
+OBJS = ${SRCS:.cpp=.o}
 
 RM = rm -f
 

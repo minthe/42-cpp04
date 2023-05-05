@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 17:37:54 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/05 16:23:17 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/05 19:00:22 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,12 @@ Character::~Character()
 {
 	for (int i = 0; i < 4; i++)
 	{
-		if (_m[i])
+		if (_m[i] != NULL)
+		{
 			delete _m[i];
+			_m[i] = NULL;
+		}
 	}
-	if (_mtrash)
-		delete _mtrash;
 }
 
 Character::Character(std::string const & name) : _name(name)
@@ -46,8 +47,11 @@ Character& Character::operator=(const Character &rhs) // deep copy
 	{
 		for (int i = 0; i < 4; i++)
 		{
-			if (_m[i])
+			if (_m[i] != NULL)
+			{
 				delete _m[i];
+				_m[i] = NULL;
+			}
 			_m[i] = rhs._m[i]->clone();
 		}
 		_name = rhs.getName();
@@ -93,8 +97,11 @@ void	Character::use(int idx, ICharacter& target)
 
 void	Character::_trash(AMateria* m)
 {
-	if (_mtrash)
+	if (_mtrash != NULL)
+	{
 		delete _mtrash;
+		_mtrash = NULL;
+	}
 	_mtrash = m;
 }
 
