@@ -6,31 +6,64 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 17:41:06 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/05 11:01:25 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/05 17:06:42 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/MateriaSource.class.hpp"
 
-MateriaSource::MateriaSource() {}
+MateriaSource::MateriaSource()
+{
+	_init_memory();
+}
+
 MateriaSource::~MateriaSource() {}
 
-MateriaSource::MateriaSource(const MateriaSource & src)
+MateriaSource::MateriaSource(const MateriaSource & src) : IMateriaSource(src)
 {
-	*this = src;
+	for (int i = 0; i < 4; i++)
+		this->_memory[i] = src._memory[i];
 }
 
 MateriaSource& MateriaSource::operator=(const MateriaSource &rhs)
 {
+	for (int i = 0; i < 4; i++)
+	{
+		if (this->_memory[i])
+			delete this->_memory[i];
+		this->_memory[i] = rhs._memory[i];
+	}
 	return *this;
 }
 
-void MateriaSource::learnMateria(AMateria *)
+void MateriaSource::learnMateria(AMateria* m)
 {
-	
+	int i = 0;
+	while (i < 4)
+	{
+		if (_memory[i] == NULL)
+		{
+			_memory[i] = m;
+			break ;
+		}
+		i++;
+	}
+	if (i == 4)
+		delete m;
 }
 
-AMateria*	MateriaSource::createMateria(const std::string &type)
+AMateria*	MateriaSource::createMateria(std::string const & type)
 {
-	
+	for (int i = 0; i < 4; i++)
+	{
+		if (this->_memory[i]->getType() == type)
+			return this->_memory[i]->clone();
+	}
+	return 0;
+}
+
+void	MateriaSource::_init_memory()
+{
+	for (int i = 0; i < 4; i++)
+		_memory[i] = NULL;
 }

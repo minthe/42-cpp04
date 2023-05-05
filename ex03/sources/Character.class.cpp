@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 17:37:54 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/05 13:34:12 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/05 16:23:17 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,7 @@
 
 Character::Character() : _name("default")
 {
-	for (int i = 0; i < 4; i++)
-		_m[i] = NULL;
-	_mtrash = NULL;
+	_init_class();
 }
 Character::~Character()
 {
@@ -31,12 +29,10 @@ Character::~Character()
 
 Character::Character(std::string const & name) : _name(name)
 {
-	for (int i = 0; i < 4; i++)
-		_m[i] = NULL;
-	_mtrash = NULL;
+	_init_class();
 }
 
-Character::Character(const Character& src) // TODO check for Dragos *this = src
+Character::Character(const Character& src) : ICharacter(src) // TODO check for Dragos *this = src
 {
 	for (int i = 0; i < 4; i++)
 		_m[i] = src._m[i]->clone();
@@ -77,21 +73,34 @@ void	Character::equip(AMateria* m)
 		i++;
 	}
 	if (i == 4)
-		trash(m);
+		_trash(m);
 }
 
 void	Character::unequip(int idx)
 {
 	if (idx >= 0 && idx < 4 && _m[idx])
 	{
-		trash(_m[idx]);
+		_trash(_m[idx]);
 		_m[idx] = NULL;
 	}
 }
 
-void	Character::trash(AMateria* m)
+void	Character::use(int idx, ICharacter& target)
+{
+	if (idx >= 0 && idx < 4 && _m[idx])
+		_m[idx]->use(target);
+}
+
+void	Character::_trash(AMateria* m)
 {
 	if (_mtrash)
 		delete _mtrash;
 	_mtrash = m;
+}
+
+void	Character::_init_class()
+{
+	for (int i = 0; i < 4; i++)
+		_m[i] = NULL;
+	_mtrash = NULL;
 }

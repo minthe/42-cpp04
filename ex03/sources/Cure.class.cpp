@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 14:18:05 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/05 14:58:19 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/05 16:25:37 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Cure::Cure() : AMateria("cure") {}
 
 Cure::~Cure() {}
 
-Cure::Cure(const Cure& src)
+Cure::Cure(const Cure& src) : AMateria(src)
 {
 	*this = src;
 }
