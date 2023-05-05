@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 17:37:53 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/05 12:47:56 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/05 13:02:54 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ class Character : public ICharacter
 
 	private:
 
-		void		floor(AMateria* m);
+		void		trash(AMateria* m);
 		std::string	_name;
 		AMateria*	_m[4];
-		AMateria*	_mfloor;
+		AMateria*	_mtrash;
 		
 };
