@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 17:37:54 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/05 20:14:48 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/05 21:53:33 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ Character::~Character()
 			_m[i] = NULL;
 		}
 	}
+	if (_mtrash)
+		delete _mtrash;
 }
 
 Character::Character(std::string const & name) : _name(name)

@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 17:31:54 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/05 21:09:48 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/05 21:53:54 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ int main() // from subject
 // 	me->equip(tmp);
 // 	tmp = src->createMateria("cure");
 // 	me->equip(tmp);
+// 	me->unequip(1);
+// 	me->unequip(2);
 
 // 	ICharacter* bob = new Character("bob");
 // 	me->use(0, *bob);
