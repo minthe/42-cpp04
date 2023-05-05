@@ -9,7 +9,6 @@ SRCS =	sources/main.cpp \
 		sources/Character.class.cpp \
 		sources/Cure.class.cpp \
 		sources/Ice.class.cpp \
-		sources/IMateriaSource.class.cpp \
 		sources/MateriaSource.class.cpp \
 
 OBJS = ${SRCS:.pp=.0}

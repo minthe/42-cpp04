@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 18:03:55 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/04 14:18:52 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/05 17:33:30 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,4 @@ class Cure : public AMateria
 		virtual ~Cure(); // canonical destructor
 		
 		Cure* clone() const;
-		void use(ICharacter& target);
 };

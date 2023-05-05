@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.class.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vfuhlenb <vfuhlenb@student.42wolfsburg.    +#+  +:+       +#+        */
+/*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 12:24:31 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/04 15:38:29 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/05 17:20:42 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

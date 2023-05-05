@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 19:19:13 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/05 16:25:27 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/05 17:22:20 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ Ice::Ice(const Ice& src) : AMateria(src)
 
 Ice& Ice::operator=(const Ice &rhs)
 {
+	(void)rhs;
 	return *this;
 }
 
@@ -33,12 +34,4 @@ Ice* Ice::clone() const
 	Ice* ptrIce;
 	ptrIce = new Ice;
 	return ptrIce;
-}
-
-void Ice::use(ICharacter &target)
-{
-	std::cout
-		<< "* shoots an ice bolt at "
-		<< target.getName() << " *"
-	<< std::endl;
 }
