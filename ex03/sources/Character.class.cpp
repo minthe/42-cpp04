@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 17:37:54 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/05 19:00:22 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/05 19:18:50 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ Character::Character(std::string const & name) : _name(name)
 	_init_class();
 }
 
-Character::Character(const Character& src) : ICharacter(src) // TODO check for Dragos *this = src
+Character::Character(const Character& src) : ICharacter(src)
 {
 	for (int i = 0; i < 4; i++)
 		_m[i] = src._m[i]->clone();
@@ -41,7 +41,7 @@ Character::Character(const Character& src) : ICharacter(src) // TODO check for D
 	_mtrash = NULL;
 }
 
-Character& Character::operator=(const Character &rhs) // deep copy
+Character& Character::operator=(const Character &rhs)
 {
 	if (this != &rhs)
 	{
@@ -82,7 +82,7 @@ void	Character::equip(AMateria* m)
 
 void	Character::unequip(int idx)
 {
-	if (idx >= 0 && idx < 4 && _m[idx])
+	if (idx >= 0 && idx < 4 && _m[idx] != NULL)
 	{
 		_trash(_m[idx]);
 		_m[idx] = NULL;
@@ -92,7 +92,11 @@ void	Character::unequip(int idx)
 void	Character::use(int idx, ICharacter& target)
 {
 	if (idx >= 0 && idx < 4 && _m[idx])
+	{
 		_m[idx]->use(target);
+		return ;
+	}
+	std::cout << "\033[34mnothing to do\033[0m" << std::endl;
 }
 
 void	Character::_trash(AMateria* m)

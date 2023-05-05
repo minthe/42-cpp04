@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 17:41:06 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/05 18:59:14 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/05 19:33:45 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,9 @@ void MateriaSource::learnMateria(AMateria* m)
 	{
 		if (_memory[i] == NULL)
 		{
-			_memory[i] = m;
+			_memory[i] = m->clone();
+			delete m;
+			m = NULL;
 			break ;
 		}
 		i++;
