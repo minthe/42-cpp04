@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 19:19:13 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/04 20:13:14 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/05 14:59:31 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 #include "../includes/AMateria.class.hpp"
 #include "../includes/Ice.class.hpp"
 
-Ice::Ice()
-{
-	 this->_type = "ice";
-}
+Ice::Ice() : AMateria("ice") {}
 
 Ice::~Ice() {}
 

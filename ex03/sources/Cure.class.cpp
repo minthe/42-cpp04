@@ -6,7 +6,7 @@
 /*   By: vfuhlenb <vfuhlenb@students.42wolfsburg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 14:18:05 by vfuhlenb          #+#    #+#             */
-/*   Updated: 2023/05/05 12:31:04 by vfuhlenb         ###   ########.fr       */
+/*   Updated: 2023/05/05 14:58:19 by vfuhlenb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 #include "../includes/AMateria.class.hpp"
 #include "../includes/Cure.class.hpp"
 
-Cure::Cure()
-{
-	 this->_type = "cure";
-}
+Cure::Cure() : AMateria("cure") {}
 
 Cure::~Cure() {}
 
